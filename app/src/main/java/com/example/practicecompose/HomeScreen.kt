@@ -14,6 +14,7 @@ import androidx.compose.material.icons.filled.AddCircle
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.KeyboardArrowRight
+import androidx.compose.material.icons.filled.Send
 import androidx.compose.material.icons.filled.TextFields
 import androidx.compose.material.icons.filled.Textsms
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -79,6 +80,13 @@ fun HomeScreen(navController: NavHostController) {
                         },
                         title = "Text Field",
                         icon = Icons.Default.Textsms
+                    )
+                    CardContent(
+                        Modifier.clickable{
+                            navController.navigate(SealedClassNavigation.sendingParameters1.route)
+                        },
+                        title = "Sending parameters to URL",
+                        icon = Icons.Default.Send
                     )
                 }
             }
