@@ -1,6 +1,5 @@
 package com.example.practicecompose.screens
 
-import android.widget.Space
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -10,10 +9,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowLeft
 import androidx.compose.material.icons.filled.AddCircle
-import androidx.compose.material.icons.filled.KeyboardArrowLeft
 import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ElevatedButton
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -41,7 +39,7 @@ fun ButtonsScreen(navController: NavHostController) {
                 navigationIcon = {
                     IconButton(onClick = { navController.popBackStack() }) {
                         Icon(
-                            imageVector = Icons.Default.KeyboardArrowLeft,
+                            imageVector = Icons.AutoMirrored.Default.KeyboardArrowLeft,
                             contentDescription = "go back"
                         )
                     }

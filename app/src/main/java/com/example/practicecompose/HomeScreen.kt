@@ -10,11 +10,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
+import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material.icons.filled.AddCircle
 import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.Info
-import androidx.compose.material.icons.filled.KeyboardArrowRight
-import androidx.compose.material.icons.filled.Send
 import androidx.compose.material.icons.filled.TextFields
 import androidx.compose.material.icons.filled.Textsms
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -86,7 +85,7 @@ fun HomeScreen(navController: NavHostController) {
                             navController.navigate(SealedClassNavigation.sendingParameters1.route)
                         },
                         title = "Sending parameters to URL",
-                        icon = Icons.Default.Send
+                        icon = Icons.AutoMirrored.Default.Send
                     )
                 }
             }
@@ -107,7 +106,7 @@ fun CardContent(modifier: Modifier, title: String, icon: ImageVector) {
             modifier = Modifier
                 .fillMaxWidth()
         ) {
-            Box() {
+            Box {
                 Row(
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
@@ -127,7 +126,7 @@ fun CardContent(modifier: Modifier, title: String, icon: ImageVector) {
             }
             IconButton(onClick = {}) {
                 Icon(
-                    imageVector = Icons.Default.KeyboardArrowRight,
+                    imageVector = Icons.AutoMirrored.Default.KeyboardArrowRight,
                     contentDescription = "go"
                 )
             }
