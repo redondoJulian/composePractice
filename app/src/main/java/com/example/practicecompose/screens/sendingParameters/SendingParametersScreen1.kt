@@ -5,8 +5,10 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowLeft
@@ -23,6 +25,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import com.example.practicecompose.CodeBlock
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -54,6 +57,45 @@ fun SendingParametersScreen1(navController: NavHostController) {
                     CardProfile("Jesica", 1160476403, navController)
                     CardProfile("Jesus", 1160456405, navController)
                     CardProfile("Kukita", 1166476402, navController)
+
+                    Column {
+                        Spacer(modifier = Modifier.height(8.dp))
+                        Text(
+                            "Ejemplo de NavHostController():",
+                            fontWeight = FontWeight.Bold,
+                            modifier = Modifier.padding(16.dp, 0.dp)
+                        )
+                        CodeBlock(
+                            code = """
+                            composable(
+                                 route = "sendingParameters2/{name}/{phone}",
+                                 arguments = listOf(
+                                       navArgument("name") { type = NavType.StringType },
+                                       navArgument("phone") { type = NavType.IntType }
+                                       )
+                            ) { backStackEntry ->
+                                 val name = backStackEntry.arguments?.getString("name")
+                                 val phone = backStackEntry.arguments?.getInt("phone")
+                            
+                                 SendingParametersScreen2(navController, name, phone) 
+                            }
+                        """.trimIndent()
+                        )
+                        Text(
+                            "Ejemplo de CardProfile():",
+                            fontWeight = FontWeight.Bold,
+                            modifier = Modifier.padding(16.dp, 0.dp)
+                        )
+                        CodeBlock(
+                            code = """
+                        modifier = Modifier
+                            .clickable{
+                                navController.navigate("sendingParameters2/$ name/$ phone")
+                            }
+                        """.trimIndent()
+                        )
+
+                    }
                 }
             }
         }

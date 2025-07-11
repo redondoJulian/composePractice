@@ -9,13 +9,22 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material.icons.filled.AddCircle
+import androidx.compose.material.icons.filled.CheckBox
 import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Image
+import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.filled.RadioButtonChecked
+import androidx.compose.material.icons.filled.SwitchLeft
 import androidx.compose.material.icons.filled.TextFields
 import androidx.compose.material.icons.filled.Textsms
+import androidx.compose.material.icons.filled.WifiProtectedSetup
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -58,7 +67,7 @@ fun HomeScreen(navController: NavHostController) {
                     .fillMaxSize()
             )
             {
-                Column {
+                Column(Modifier.verticalScroll(rememberScrollState())) {
                     CardContent(
                         Modifier.clickable{
                             navController.navigate(SealedClassNavigation.text.route)
@@ -86,6 +95,63 @@ fun HomeScreen(navController: NavHostController) {
                         },
                         title = "Sending parameters to URL",
                         icon = Icons.AutoMirrored.Default.Send
+                    )
+                    CardContent(
+                        Modifier.clickable{
+                            navController.navigate(SealedClassNavigation.checkbox.route)
+                        },
+                        title = "Checkbox",
+                        icon = Icons.Default.CheckBox
+                    )
+                    CardContent(
+                        Modifier.clickable{
+                            navController.navigate(SealedClassNavigation.switch.route)
+                        },
+                        title = "Switch",
+                        icon = Icons.Default.SwitchLeft
+                    )
+                    CardContent(
+                        Modifier.clickable{
+                            navController.navigate(SealedClassNavigation.radios.route)
+                        },
+                        title = "Radios",
+                        icon = Icons.Default.RadioButtonChecked
+                    )
+                    CardContent(
+                        Modifier.clickable{
+                            navController.navigate(SealedClassNavigation.image.route)
+                        },
+                        title = "Images",
+                        icon = Icons.Default.Image
+                    )
+                    CardContent(
+                        Modifier.clickable{
+                            navController.navigate(SealedClassNavigation.indicators.route)
+                        },
+                        title = "Indicators",
+                        icon = Icons.Default.WifiProtectedSetup
+                    )
+                    CardContent(
+                        Modifier.clickable{
+                            navController.navigate(SealedClassNavigation.badges.route)
+                        },
+                        title = "Badges",
+                        icon = Icons.Default.WifiProtectedSetup
+                    )
+                    HorizontalDivider()
+                    CardContent(
+                        Modifier.clickable{
+                            navController.navigate(SealedClassNavigation.remember.route)
+                        },
+                        title = "Recordatorios",
+                        icon = Icons.Default.Info
+                    )
+                    CardContent(
+                        Modifier.clickable{
+                            navController.navigate(SealedClassNavigation.practice.route)
+                        },
+                        title = "Practice",
+                        icon = Icons.Default.Person
                     )
                 }
             }
@@ -133,5 +199,5 @@ fun CardContent(modifier: Modifier, title: String, icon: ImageVector) {
         }
 
     }
-    HorizontalDivider()
+    //HorizontalDivider()
 }
