@@ -15,4 +15,5 @@ sealed class SealedClassNavigation(val route: String) {
     object image : SealedClassNavigation("image")
     object indicators : SealedClassNavigation("indicators")
     object badges : SealedClassNavigation("badges")
+    object slider : SealedClassNavigation("slider")
 }

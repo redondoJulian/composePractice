@@ -19,11 +19,13 @@ import androidx.compose.material.icons.filled.CheckBox
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Image
 import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.RadioButtonChecked
 import androidx.compose.material.icons.filled.SwitchLeft
 import androidx.compose.material.icons.filled.TextFields
 import androidx.compose.material.icons.filled.Textsms
+import androidx.compose.material.icons.filled.VolumeDown
 import androidx.compose.material.icons.filled.WifiProtectedSetup
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
@@ -136,7 +138,14 @@ fun HomeScreen(navController: NavHostController) {
                             navController.navigate(SealedClassNavigation.badges.route)
                         },
                         title = "Badges",
-                        icon = Icons.Default.WifiProtectedSetup
+                        icon = Icons.Default.Notifications
+                    )
+                    CardContent(
+                        Modifier.clickable{
+                            navController.navigate(SealedClassNavigation.slider.route)
+                        },
+                        title = "Slider",
+                        icon = Icons.Default.VolumeDown
                     )
                     HorizontalDivider()
                     CardContent(

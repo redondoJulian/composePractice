@@ -14,6 +14,7 @@ import com.example.practicecompose.screens.IndicatorsScreen
 import com.example.practicecompose.screens.PracticeScreen
 import com.example.practicecompose.screens.RadiosScreen
 import com.example.practicecompose.screens.RememberScreen
+import com.example.practicecompose.screens.SliderScreen
 import com.example.practicecompose.screens.SwitchScreen
 import com.example.practicecompose.screens.TextFieldScreen
 import com.example.practicecompose.screens.TextScreen
@@ -34,7 +35,7 @@ fun NavHostController() {
         composable(route = SealedClassNavigation.image.route) { ImageScreen(navController) }
         composable(route = SealedClassNavigation.indicators.route) { IndicatorsScreen(navController) }
         composable(route = SealedClassNavigation.badges.route) { BadgesScreen(navController) }
-
+        composable(route = SealedClassNavigation.slider.route) { SliderScreen(navController) }
         composable(route = SealedClassNavigation.remember.route) { RememberScreen(navController) }
         composable(route = SealedClassNavigation.practice.route) { PracticeScreen(navController) }
 
