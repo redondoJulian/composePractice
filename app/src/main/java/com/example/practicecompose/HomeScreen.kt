@@ -14,17 +14,25 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.automirrored.filled.Send
+import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.AddCircle
+import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.CheckBox
+import androidx.compose.material.icons.filled.CircleNotifications
+import androidx.compose.material.icons.filled.Draw
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Image
+import androidx.compose.material.icons.filled.Inbox
 import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.Navigation
 import androidx.compose.material.icons.filled.Notifications
+import androidx.compose.material.icons.filled.Pages
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.RadioButtonChecked
 import androidx.compose.material.icons.filled.SwitchLeft
 import androidx.compose.material.icons.filled.TextFields
 import androidx.compose.material.icons.filled.Textsms
+import androidx.compose.material.icons.filled.VerticalAlignBottom
 import androidx.compose.material.icons.filled.VolumeDown
 import androidx.compose.material.icons.filled.WifiProtectedSetup
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -147,6 +155,49 @@ fun HomeScreen(navController: NavHostController) {
                         title = "Slider",
                         icon = Icons.Default.VolumeDown
                     )
+                    CardContent(
+                        Modifier.clickable{
+                            navController.navigate(SealedClassNavigation.dropdown.route)
+                        },
+                        title = "Dropdown",
+                        icon = Icons.Default.ArrowDropDown
+                    )
+                    CardContent(
+                        Modifier.clickable{
+                            navController.navigate(SealedClassNavigation.cards.route)
+                        },
+                        title = "Cards",
+                        icon = Icons.Default.Inbox
+                    )
+                    CardContent(
+                        Modifier.clickable{
+                            navController.navigate(SealedClassNavigation.pager.route)
+                        },
+                        title = "Pager",
+                        icon = Icons.Default.Pages
+                    )
+                    CardContent(
+                        Modifier.clickable{
+                            navController.navigate(SealedClassNavigation.bottomAppBar.route)
+                        },
+                        title = "BottomNavigationBar",
+                        icon = Icons.Default.VerticalAlignBottom
+                    )
+                    CardContent(
+                        Modifier.clickable{
+                            navController.navigate(SealedClassNavigation.modalNavigationDrawer.route)
+                        },
+                        title = "Modal Navigation Drawer",
+                        icon = Icons.Default.Draw
+                    )
+                    CardContent(
+                        Modifier.clickable{
+                            navController.navigate(SealedClassNavigation.circularImage.route)
+                        },
+                        title = "Circular Image",
+                        icon = Icons.Default.AccountCircle
+                    )
+
                     HorizontalDivider()
                     CardContent(
                         Modifier.clickable{

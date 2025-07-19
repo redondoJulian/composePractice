@@ -7,10 +7,16 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.example.practicecompose.screens.BadgesScreen
+import com.example.practicecompose.screens.BottomAppBarScreen
 import com.example.practicecompose.screens.ButtonsScreen
+import com.example.practicecompose.screens.CardScreen
 import com.example.practicecompose.screens.CheckboxScreen
+import com.example.practicecompose.screens.CircularImageScreen
+import com.example.practicecompose.screens.DropwdownScreen
 import com.example.practicecompose.screens.ImageScreen
 import com.example.practicecompose.screens.IndicatorsScreen
+import com.example.practicecompose.screens.ModalNavigatorDrawerScreen
+import com.example.practicecompose.screens.PagerScreen
 import com.example.practicecompose.screens.PracticeScreen
 import com.example.practicecompose.screens.RadiosScreen
 import com.example.practicecompose.screens.RememberScreen
@@ -36,6 +42,13 @@ fun NavHostController() {
         composable(route = SealedClassNavigation.indicators.route) { IndicatorsScreen(navController) }
         composable(route = SealedClassNavigation.badges.route) { BadgesScreen(navController) }
         composable(route = SealedClassNavigation.slider.route) { SliderScreen(navController) }
+        composable(route = SealedClassNavigation.dropdown.route) { DropwdownScreen(navController) }
+        composable(route = SealedClassNavigation.cards.route) { CardScreen(navController) }
+        composable(route = SealedClassNavigation.pager.route) { PagerScreen(navController) }
+        composable(route = SealedClassNavigation.bottomAppBar.route) { BottomAppBarScreen(navController) }
+        composable(route = SealedClassNavigation.modalNavigationDrawer.route) { ModalNavigatorDrawerScreen(navController) }
+        composable(route = SealedClassNavigation.circularImage.route) { CircularImageScreen(navController) }
+
         composable(route = SealedClassNavigation.remember.route) { RememberScreen(navController) }
         composable(route = SealedClassNavigation.practice.route) { PracticeScreen(navController) }
 

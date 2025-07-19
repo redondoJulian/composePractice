@@ -16,4 +16,10 @@ sealed class SealedClassNavigation(val route: String) {
     object indicators : SealedClassNavigation("indicators")
     object badges : SealedClassNavigation("badges")
     object slider : SealedClassNavigation("slider")
+    object dropdown : SealedClassNavigation("dropdown")
+    object cards : SealedClassNavigation("cards")
+    object pager : SealedClassNavigation("pager")
+    object bottomAppBar : SealedClassNavigation("bottomAppBar")
+    object modalNavigationDrawer : SealedClassNavigation("modalNavigationDrawer")
+    object circularImage : SealedClassNavigation("circularImage")
 }
