@@ -63,7 +63,7 @@ fun PagerScreen(navController: NavHostController) {
             ) {
 
                 CodeBlock("""
-                    val pagerState = rememberPagerState { 5 }
+                    val pagerState = rememberPagerState(pageCount = { 5 })
                     HorizontalPager( state = pagerState ){ Text(it.toString()) }
                 """.trimIndent())
 
